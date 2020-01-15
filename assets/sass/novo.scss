@@ -1,0 +1,231 @@
+#preview-bar-container {
+    display: none;
+}
+
+// Variables
+$color-brand: #a80456;
+$blue:    #0a4595;
+$indigo:  #6610f2;
+$purple:  #6e1ac9;
+$pink:    #FF5087;
+$red:     #dc3545;
+$orange:  #E16519;
+$yellow:  #FDB32B;
+$green:   #85CF39;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+$gray:    #979797;
+
+$easing: cubic-bezier(.62,.28,.23,.99);
+
+// Sections
+section {
+    margin-bottom: 80px;
+    &.section-padding {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .section-title {
+        text-align: center;
+        color: $blue;
+        margin-bottom: 40px;
+    }
+    .section-excerpt {
+        margin-bottom: 20px;
+        p {
+            font-size: 12px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+// Buttons
+.button {
+    all: unset;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 180px;
+    font-weight: 700;
+    color: #fff;
+    background-color: $color-brand;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    transition: .4s $easing;
+    &.is-block {
+        display: block;
+        width: 100%;
+    }
+    &:hover {
+        color: #fff;
+        background: darken($color-brand, 10%);
+    }
+}
+
+// Helpers
+%subtitle {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.d-none {
+    display: none;
+}
+
+// Containers
+.row {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+    .col {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+// Box
+.box {
+    display: flex;
+    height: 100%;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 0.2rem 1.25rem 0 rgba(#000, 0.07);
+    border-radius: 5px;
+    i {
+        font-size: 3em;
+        color: $purple;
+        margin-right: 40px;
+    }
+    .box-content {
+        h2, h3, h4, h5, h6 {
+            color: $blue;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 0;
+        }
+        ul {
+            margin-bottom: 20px;
+            li {
+                display: block;
+                a {
+                    color: #000;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+    &.box-line {
+        justify-content: space-between;
+        padding: 30px;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        .meta {
+            @extend %subtitle;
+            margin: 0;
+        }
+    }
+}
+
+// Header
+.sancor-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 100;
+    .header-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .sancor-logo {
+            flex-grow: 1;
+            img {
+                max-width: 180px;
+            }
+        }
+    }
+}
+
+// Atividades
+.atividades {
+    .recent-activity-header {
+        color: $blue;
+        margin-bottom: 40px;
+    }
+}
+
+// Comunidade
+.comunidade {
+    .section-title {
+        i {
+            font-size: 2.4em;
+        }
+    }
+    .section-content {
+        text-align: center;
+        p {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+// Footer
+.sancor-footer {
+    padding: 40px 0;
+    background-image: linear-gradient(to right, $purple, $color-brand);
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logo {
+            flex-grow: 1;
+            img {
+                max-width: 180px;
+            }
+        }
+        nav {
+            .social {
+                display: flex;
+                li {
+                    display: inline-flex;
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                        font-size: 20px;
+                        color: #fff;
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
